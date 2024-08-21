@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lite Note</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            background-color: #f0f0f0;
+        }
+        
+        .sidebar {
+            width: 60px;
+            background-color: #ffffff;
+            padding: 20px 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .sidebar img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+        }
+        
+        .sidebar-icon {
+            margin: 15px 0;
+            color: #888;
+            font-size: 1.2em;
+        }
+        
+        .main-content {
+            flex-grow: 1;
+            padding: 20px;
+            background-color: #ffffff;
+            margin: 0 20px;
+        }
+        
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        
+        .nav-tabs {
+            display: flex;
+        }
+        
+        .nav-tab {
+            margin-right: 20px;
+            color: #888;
+            cursor: pointer;
+        }
+        
+        .nav-tab.active {
+            color: #000;
+            font-weight: bold;
+        }
+        
+        .search-bar {
+            padding: 8px 15px;
+            border: 1px solid #ccc;
+            border-radius: 20px;
+            width: 200px;
+        }
+        
+        .article-card {
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+            padding: 20px;
+            display: flex;
+        }
+        
+        .article-content {
+            flex-grow: 1;
+        }
+        
+        .article-image {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            margin-left: 20px;
+            border-radius: 8px;
+        }
+        
+        .article-stats {
+            display: flex;
+            color: #888;
+            font-size: 0.9em;
+            margin-top: 10px;
+        }
+        
+        .article-stat {
+            margin-right: 15px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .article-stat i {
+            margin-right: 5px;
+        }
+        
+        .sidebar-right {
+            width: 250px;
+            padding: 20px;
+            background-color: #ffffff;
+        }
+        
+        .follow-suggestion {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        
+        .follow-suggestion img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+        
+        .follow-button {
+            background-color: transparent;
+            border: 1px solid #ff4500;
+            color: #ff4500;
+            padding: 5px 10px;
+            border-radius: 20px;
+            cursor: pointer;
+        }
+        
+        .topic-tags {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        
+        .topic-tag {
+            background-color: #f0f0f0;
+            padding: 5px 10px;
+            border-radius: 20px;
+            margin-right: 10px;
+            margin-bottom: 10px;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <img src="profile-pic.jpg" alt="Profile">
+        <i class="fas fa-home sidebar-icon"></i>
+        <i class="fas fa-bell sidebar-icon"></i>
+        <i class="fas fa-book sidebar-icon"></i>
+        <i class="fas fa-pen sidebar-icon"></i>
+    </div>
+    
+    <div class="main-content">
+        <div class="header">
+            <h1>Lite Note</h1>
+            <div class="nav-tabs">
+                <div class="nav-tab active">Recommended</div>
+                <div class="nav-tab">Following</div>
+                <div class="nav-tab">Challenges</div>
+            </div>
+            <input type="text" class="search-bar" placeholder="Search">
+        </div>
+        
+        <div class="article-card">
+            <div class="article-content">
+                <img src="girl.jpg" alt="Amit Das" style="width: 40px; height: 40px; border-radius: 50%; margin-right: 10px;">
+                <strong>Amit Das</strong>
+                <span style="color: #888;">Blogger</span>
+                <h2>Your portfolio is stopping you from getting that job</h2>
+                <p>An intense way to learn about the process and practice your designs skills — My 1st hackathon Hackathons have been on my mind since I heard it was a good way to gain experience as a junior UX designer. As my portfolio...</p>
+                <div class="article-stats">
+                    <span class="article-stat"><i class="far fa-clock"></i> 4 days ago</span>
+                    <span class="article-stat"><i class="fas fa-book-open"></i> 3 min read</span>
+                    <span class="article-stat"><i class="far fa-eye"></i> 80</span>
+                    <span class="article-stat"><i class="far fa-heart"></i> 16</span>
+                    <span class="article-stat"><i class="far fa-bookmark"></i></span>
+                </div>
+            </div>
+            <img src="42.png" alt="Article image" class="article-image">
+        </div>
+        
+        <div class="article-card">
+            <div class="article-content">
+                <img src="29.jpg" alt="Costa Dean" style="width: 40px; height: 40px; border-radius: 50%; margin-right: 10px;">
+                <strong>Costa Dean</strong>
+                <span style="color: #888;">Content Manager</span>
+                <h2>Melody mobile app: a UI UX case study</h2>
+                <p>An intense way to learn about the process and practice your designs skills — My 1st hackathon Hackathons have been on my mind since I heard it was a good way to gain experience as a junior UX designer. As my portfolio...</p>
+                <div class="article-stats">
+                    <span class="article-stat"><i class="far fa-clock"></i> 8 days ago</span>
+                    <span class="article-stat"><i class="fas fa-book-open"></i> 34 min read</span>
+                    <span class="article-stat"><i class="far fa-eye"></i> 200</span>
+                    <span class="article-stat"><i class="far fa-heart"></i> 39</span>
+                    <span class="article-stat"><i class="far fa-bookmark"></i></span>
+                </div>
+            </div>
+            <img src="44.png" alt="Article image" class="article-image">
+        </div>
+    </div>
+    
+    <div class="sidebar-right">
+        <h3>Who to follow</h3>
+        <div class="follow-suggestion">
+            <img src="29.jpg" alt="Elon Jaman">
+            <div>
+                <strong>Elon Jaman</strong>
+                <p style="font-size: 0.8em; color: #888;">Blogger, Researcher, Content Manager</p>
+            </div>
+            <button class="follow-button">Follow</button>
+        </div>
+        
+        <div class="follow-suggestion">
+            <img src="https://via.placeholder.com/40" alt="Dogecoin">
+            <div>
+                <strong>Dogecoin</strong>
+                <p style="font-size: 0.8em; color: #888;">Writer, Dogecoin Expert</p>
+            </div>
+            <button class="follow-button">Follow</button>
+        </div>
+        
+        <h3>Trendy Stories</h3>
+        <div style="display: flex; align-items: center; margin-bottom: 10px;">
+            <img src="https://via.placeholder.com/40" alt="Tim Kate" style="width: 40px; height: 40px; border-radius: 50%; margin-right: 10px;">
+            <div>
+                <strong>Tim Kate</strong> • 2 months
+                <p>The pros and cons of the new iPhone - Tips and tricks</p>
+            </div>
+        </div>
+        
+        <h3>Recommended Topic</h3>
+        <div class="topic-tags">
+            <span class="topic-tag">Technology</span>
+            <span class="topic-tag">Money</span>
+            <span class="topic-tag">Business</span>
+            <span class="topic-tag">Productivity</span>
+            <span class="topic-tag">Art</span>
+            <span class="topic-tag">Mindfulness</span>
+            <span class="topic-tag">Fitness</span>
+        </div>
+    </div>
+</body>
+</html>
